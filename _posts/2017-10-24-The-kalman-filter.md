@@ -4,7 +4,7 @@ title:  "The Kalman Filter"
 date:   2017-10-24 -0600
 categories: robotics
 ---
-
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 <p>
 Kalman filters are recursive state estimators for linear Gaussian systems. Given one, or multiple observations, a Kalman filter provides an estimate of the state of the system. The output is a least squares optimal estimate based on the observations and an internal model that continuously predicts the next state. Each input value should be associated with an estimate of it’s uncertainty, expressed as a covariance. The state estimation model will also have an associated uncertainty, often referred to as process noise. A neat property of the Kalman filter is that since the output is an optimal estimate.
 </p>
