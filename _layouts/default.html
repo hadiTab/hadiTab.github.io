@@ -22,10 +22,16 @@
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-    <header class="page-header" role="banner">
-      
-      <a href="/index.html"><h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1></a>
-      <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+    <div class="page-header" role="banner">
+      <div class="header-box"> 
+        <div class="project-name"><a href="/index.html">{{ site.title | default: site.github.repository_name }}</a></div>
+        <div class="nav">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+      <div class="project-tagline">{{ site.description | default: site.github.project_tagline }}</div>
+    </div>  
+
     </header>
 
     <main id="content" class="main-content" role="main">
