@@ -12,7 +12,3 @@ I work as a software engineer at [LG silicon valley lab](http://lgsvl.com) on au
 ◉ &nbsp;  [Linkedin](https://www.linkedin.com/in/tabatabaee) \\
 ◉ &nbsp;  [Github](https://github.com/hadiTab)
 
-
-\\
-\\
-[back](./)
