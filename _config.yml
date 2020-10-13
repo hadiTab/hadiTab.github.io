@@ -1,3 +1,5 @@
 title: Hadi Tabatabaee
 description: Software and Robots
 theme: minima
+
+show_excerpts: true # set to true to show excerpts on the homepage
