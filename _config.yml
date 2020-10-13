@@ -1,5 +1,17 @@
 title: Hadi Tabatabaee
-description: Software and Robots
-theme: minima
+description: Software and Robots.
 
 show_excerpts: true # set to true to show excerpts on the homepage
+
+minima:
+  date_format: "%b %-d, %Y"
+
+  social_links:
+    github:  haditab
+    linkedin: tabatabaee
+
+theme: minima
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
