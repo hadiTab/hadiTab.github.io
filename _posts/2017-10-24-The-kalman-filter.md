@@ -50,7 +50,7 @@ Here, $u_t$ is an $m$-element vector describing the control variables, and $B_t$
 Let’s continue the discussion with a simple example of the one dimensional position of a robot (i.e. a robot that is constrained to a linear rail). The state variable for our filter will be the position along the single axis represented by $x$. A sensor measures the linear position and outputs an estimate $z$ at some frequency with some uncertainty modeled as white noise. The figure below shows the measured position of the robot over a 100 time-step interval.
 
 ![image1](/images/kf_01.png)
-<div><p class="wp-caption-text">The robot position along the x-axis. There is a good amount of noise.</p></div>
+<div><p class="caption">The robot position along the x-axis. There is a good amount of noise.</p></div>
 
 These measurements are somewhat noisy and we probably want a smoother position output since this output will likely be used for path planning and motion control. Let’s try getting a smoother output by using a Kalman filter. We need to come up with a state prediction model for the internal prediction step of the filter. The model predicts the future state of the robot based on the present state. Taking another look at the figure above, you may notice that changes in position usually happen at a constant rate. Meaning that the robot usually travels at a constant velocity. Let’s make this our state transition model. This is what the state transition model would look like:
 
@@ -103,7 +103,7 @@ Going back to our example data, by applying a Kalman filter we get much smoother
 
 
 ![image2](/images/kf_02.png)
-<p class="wp-caption-text">The Kalman filter provides smooth estimates but overshoots at sudden velocity changes.</p></div>
+<div><p class="caption">The Kalman filter provides smooth estimates but overshoots at sudden velocity changes.</p></div>
 
 
 The filter definitely smoothened out the observations, however it does overshoot with sudden velocity changes. This is expected because of the constant velocity assumption in the state transition model. The quality of the output is also highly dependent on the process noise. For instance, increasing the uncertainty in the velocity component of the state vector compared to the position component mitigates the overshoots to some extent. I’ve included a copy of the python code I used to generate data and for the Kalman filter used in this example. You can try playing around with the tuning variables to get a better understanding of how they affect the results. Also, note that this is a ‘quick and dirty’ implementation of a Kalman filter for this example only, I would not suggest using it in any serious project.
